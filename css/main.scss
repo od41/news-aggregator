@@ -1,0 +1,38 @@
+$brand-primary: #232D39;
+
+*, body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    height: 200px;
+    display: flex;
+    // flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+    align-content: center;
+
+    .logo {
+        text-transform: uppercase;
+        font-style: oblique;
+    }
+
+    .update-btn {
+        justify-self: flex-end;
+    }
+}
+
+.button {
+    // width: auto;
+    background: $brand-primary;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    height: 40px;
+    border-radius: 25px;
+}

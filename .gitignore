@@ -3,3 +3,6 @@
 # design files
 *.png
 *.studio
+
+# working files
+*.css.map
