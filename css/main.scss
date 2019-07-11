@@ -1,4 +1,12 @@
+// colours
 $brand-primary: #232D39;
+$brand-background: #F6F7FB;
+
+// font
+$body-font-size: 1em; 
+$h3: 1.2em;
+$h2: 2em;
+$h1: 3em;
 
 *, body, html {
     margin: 0;
@@ -7,6 +15,7 @@ $brand-primary: #232D39;
 
 body {
     font-family: 'Roboto', sans-serif;
+    background: $brand-background;
 }
 
 header {
@@ -16,6 +25,7 @@ header {
     justify-content: space-evenly;
     padding: 10px;
     align-content: center;
+    background: #fff;
 
     .logo {
         text-transform: uppercase;
@@ -35,4 +45,51 @@ header {
     border: none;
     height: 40px;
     border-radius: 25px;
+}
+
+
+.main {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 60px auto;
+
+    .filters {
+        padding: 2em;
+        font-size: $body-font-size;
+        background: #fff;
+        margin: 0 2em;
+
+
+        h3 {
+            font-size: $h3;
+            text-transform: uppercase;
+            margin: 10px 0;
+            
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                input {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .container {
+        padding: 2em;
+        margin: 0 2em;
+
+        .news-list-item {
+            background: #fff;
+            margin: 2em 0;
+            padding: 1.5em;
+        }
+    }
+
+    .marquee {
+        height: 20em;
+    }
 }
