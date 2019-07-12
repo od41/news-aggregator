@@ -9,14 +9,13 @@ body {
 }
 
 header {
-  height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 10px;
+  padding: 1em 2em;
   -ms-flex-line-pack: center;
       align-content: center;
   background: #fff;
@@ -43,9 +42,9 @@ header .update-btn {
 .main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 30% 70%;
-      grid-template-columns: 30% 70%;
-  margin: 60px auto;
+  -ms-grid-columns: 20% 50%;
+      grid-template-columns: 20% 50%;
+  margin: 4em auto;
 }
 
 .main .filters {
@@ -70,17 +69,58 @@ header .update-btn {
 }
 
 .main .container {
-  padding: 2em;
   margin: 0 2em;
+}
+
+.main .container .marquee {
+  height: 10em;
+  margin-top: 0 !important;
 }
 
 .main .container .news-list-item {
   background: #fff;
   margin: 2em 0;
   padding: 1.5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30%;
+      grid-template-columns: 30%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "news-image title" "news-image excerpt" "news-image read-more";
 }
 
-.main .marquee {
-  height: 20em;
+.main .container .news-list-item .news-image {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: news-image;
+}
+
+.main .container .news-list-item .news-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: title;
+}
+
+.main .container .news-list-item .news-excerpt {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: excerpt;
+}
+
+.main .container .news-list-item .read-more {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: read-more;
+}
+
+.news-image {
+  width: 140px;
+  height: 100px;
+  background-image: url("../img/julie-home-01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 /*# sourceMappingURL=main.css.map */

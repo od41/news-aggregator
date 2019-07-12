@@ -19,11 +19,11 @@ body {
 }
 
 header {
-    height: 200px;
+    // height: 200px;
     display: flex;
     // flex-flow: row wrap;
     justify-content: space-evenly;
-    padding: 10px;
+    padding: 1em 2em;
     align-content: center;
     background: #fff;
 
@@ -50,8 +50,8 @@ header {
 
 .main {
     display: grid;
-    grid-template-columns: 30% 70%;
-    margin: 60px auto;
+    grid-template-columns: 20% 50%;
+    margin: 4em auto;
 
     .filters {
         padding: 2em;
@@ -79,17 +79,52 @@ header {
     }
 
     .container {
-        padding: 2em;
+        // padding: 2em;
         margin: 0 2em;
+
+        .marquee {
+            height: 10em;
+            margin-top: 0 !important; 
+        }
 
         .news-list-item {
             background: #fff;
             margin: 2em 0;
             padding: 1.5em;
+            display: grid;
+            grid-template-columns: 30%;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "news-image title"
+                "news-image excerpt"
+                "news-image read-more";
+
+            .news-image {
+                grid-area: news-image;
+            }
+            .news-title {
+                grid-area: title;
+            }
+            .news-excerpt {
+                grid-area: excerpt;
+            }
+            .read-more {
+                grid-area: read-more;
+            }
         }
     }
 
-    .marquee {
-        height: 20em;
-    }
+    
 }
+
+
+
+.news-image {
+    width: 140px;
+    height: 100px;
+    background-image: url('../img/julie-home-01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
